@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.dockerfile
+ports:
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: ignore
+tasks:
+  - command: >
+      ./mach run -r -z https://www.wikipedia.org -x -o test.png &&
+      gp open test.png
