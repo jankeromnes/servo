@@ -285,7 +285,8 @@ def bootstrap(topdir):
                      wptrunner_path(is_firefox, topdir),
                      wptserve_path(is_firefox, topdir)]
 
-    import pprint, pprint.pprint(sys.path)
+    import pprint
+    pprint.pprint(sys.path)
     import mach.main
     mach = mach.main.Mach(os.getcwd())
     mach.populate_context_handler = populate_context
