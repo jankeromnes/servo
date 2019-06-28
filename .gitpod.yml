@@ -6,6 +6,7 @@ ports:
   - port: 6080
     onOpen: ignore
 tasks:
-  - command: >
+  - init: python --version && python2.7 --version && ./mach build -r
+    command: >
       ./mach run -r -z https://www.wikipedia.org -x -o test.png &&
       gp open test.png
